@@ -1,0 +1,67 @@
+/* About Section Styling */
+.about {
+    background-color: rgb(30, 30, 30); /* Dark background */
+    color: white; /* Light text */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    max-width: 75rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+    height: 100vh; /* Full viewport height */
+}
+
+/* About Title */
+.aboutTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* About Description */
+.aboutDesc {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* About Details */
+.aboutDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; /* Centers the items inside */
+}
+
+/* About Detail Item */
+.aboutDetailItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Icon Styling */
+.aboutIcon {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 720px) {
+    .about {
+        padding: 1rem;
+    }
+
+    .aboutTitle {
+        font-size: 1.5rem;
+    }
+
+    .aboutDesc {
+        font-size: 1rem;
+    }
+}
