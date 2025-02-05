@@ -27,8 +27,8 @@ const Navbar = () => {
       </button>
 
       <div className="iconGroup">
-        <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={20} /></a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin size={20} /></a>
+        <a href="https://github.com/rohitbhau" target="_blank" rel="noreferrer"><FaGithub size={20} /></a>
+        <a href="https://www.linkedin.com/in/rohit-kumbhare" target="_blank" rel="noreferrer"><FaLinkedin size={20} /></a>
         <button onClick={toggleDarkMode}>
           {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
         </button>

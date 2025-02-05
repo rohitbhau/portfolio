@@ -1,71 +1,100 @@
-#skills{
-    overflow: hidden;
-    width: 100vw;
-    max-width: 65rem;
+#skills {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 75rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Title and Description */
+.skillDesc {
+    font-size: 2rem;
+    font-weight: bold;
+   
+}
+.skillTitle, .skillDesc {
+    width: 100%; /* Take up full width of parent container */
+    text-align: right; /* Align text to the right */
+    margin: 0; /* Remove any default margin */
+}
+
+.skillTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+/* Skill Cards Container */
+.skillBars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1rem;
+}
+
+/* Skill Card */
+.skillBar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-
+    text-align: center; /* Ensures text inside skill cards is centered */
 }
-.skillTitle{
-    font-size: 3rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    margin-bottom: 1.5rem;
 
+.skillBar:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
-.skillDesc{
-    font-weight: 400;
-    font-size: 1rem;
-    max-width: 50rem;
-    padding: 0 2rem;
 
-}
-.skillBars{
-    margin: 1.5rem;
-    width: 100vw;
-    max-width: 80%;
-    text-align: left;
-
-}
-.skillBar{
-    display: flex;
-    margin: 1rem;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
-    background: rgb(50,50,50);
-
-}
-.skillBarImg{
+/* Skill Image */
+.skillBarImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin-right: 2rem;
-
+    margin-bottom: 1rem;
+    border: 2px solid #fff;
 }
-.skillBarText>p{
-    font-size: 0.9rem;
-    font-weight: 200;
 
+/* Skill Text */
+.skillBarText h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
 }
-@media  screen and (max-width:720px){
-    .skillBarText>p{
-        font-size: 2vw;
-    }
-}
-@media  screen and (max-width:480px){
-    .skillBarText>p{
-        font-size: 3vw;
-    }
-    .skillBarImg{
-        height: 2.25rem;
-        width: 2.25rem;
 
+.skillBarText p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 720px) {
+    .skillBars {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
     }
-    .skillBarText>h2{
-        font-size: 5vw;
+
+    .skillBar {
+        padding: 1rem;
+    }
+
+    .skillBarImg {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Adjust text alignment for smaller screens */
+    .skillTitle, .skillDesc {
+        text-align: center;
     }
 }
