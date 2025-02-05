@@ -30,7 +30,14 @@
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
 }
+.logo img {
+    width: 50px;    /* Adjust the width */
+    height: auto;   /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure it fits well */
+    border-radius: 8px;  /* Optional: round the edges */
+  }
 
 /* Desktop Menu */
 .desktopMenu {

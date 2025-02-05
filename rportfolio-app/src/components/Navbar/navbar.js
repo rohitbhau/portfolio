@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import "./navbar.css";
 import { FaGithub, FaLinkedin, FaMoon, FaSun, FaBars } from 'react-icons/fa';
+import Logo from '../../assets/logo.jpg';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,13 +12,13 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${darkMode ? 'dark-mode' : ''}`}>
-      <div className="logo">YourLogo</div>
+      <div className="logo"> <img src={Logo} alt=""/></div>
 
       <ul className="desktopMenu">
         <li className="desktopMenuItem"><a href="#home">Home</a></li>
         <li className="desktopMenuItem"><a href="#about">About</a></li>
-        <li className="desktopMenuItem"><a href="#projects">Projects</a></li>
         <li className="desktopMenuItem"><a href="#skills">Skills</a></li>
+        <li className="desktopMenuItem"><a href="#projects">Projects</a></li>
         <li className="desktopMenuItem"><a href="#contact">Contact</a></li>
       </ul>
 

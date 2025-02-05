@@ -1,8 +1,8 @@
 import React from 'react';
 import './intro.css';
-import {Link} from 'react-scroll';
+// import {Link} from 'react-scroll';
 import Profile from '../../assets/profile.png';
-import Hire from '../../assets/hire.jpg';
+// import Hire from '../../assets/hire.jpg';
 
 const Intro = () => {
   return (
@@ -13,7 +13,7 @@ const Intro = () => {
         FullStack Developer
         </span>
         <p className='introPara'>I am a skilled full stack developer with developing user freindly <br/> website projects </p>
-        <Link><button className='btn'><img src={Hire} alt="Logo" className='btnImg'/>Hire me</button></Link>
+        {/* <Link><button className='btn'><img src={Hire} alt="Logo" className='btnImg'/>Hire me</button></Link> */}
        
       </div>
       <img src={Profile} alt="" className="bg"/>

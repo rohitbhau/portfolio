@@ -10,9 +10,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centers content horizontally */
-    text-align: center; /* Centers text */
-    height: 100vh; /* Full viewport height */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
 }
 
 /* About Title */
@@ -20,48 +20,75 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #00bcd4; /* Accent color */
 }
 
-/* About Description */
-.aboutDesc {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* About Details */
-.aboutDetails {
+/* About Container */
+.aboutContainer {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center; /* Centers the items inside */
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch; /* Ensures equal height */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Left & Right Sections */
+.aboutLeft, .aboutRight {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Equal width */
+    min-width: 300px; /* Ensures proper width on smaller screens */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: space-between; /* Distributes space evenly */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
 }
 
 /* About Detail Item */
 .aboutDetailItem {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider */
+    font-size: 1rem;
 }
 
-/* Icon Styling */
-.aboutIcon {
-    width: 2rem;
-    height: 2rem;
-    object-fit: cover;
+/* Labels */
+.aboutDetailItem strong {
+    color: #ff9800; /* Highlight */
+    min-width: 120px;
+    text-align: left;
+    font-weight: 600;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 720px) {
     .about {
         padding: 1rem;
+        min-height: auto; /* Adjust height for smaller screens */
     }
 
     .aboutTitle {
         font-size: 1.5rem;
     }
 
-    .aboutDesc {
-        font-size: 1rem;
+    .aboutContainer {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem;
+    }
+
+    .aboutLeft, .aboutRight {
+        padding: 1rem;
+    }
+
+    .aboutDetailItem {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
