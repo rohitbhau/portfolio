@@ -56,6 +56,10 @@
     color: white;
 }
 
+.listItem:hover, .desktopMenuItem a:hover {
+  color: #007bff;  /* Add hover effect */
+}
+
 .desktopMenuItem:hover {
     color: #539165;
     padding-bottom: 0.5rem;
@@ -68,6 +72,7 @@
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #539165;
 }
+
 
 /* Resume Button */
 .desktopMenubtn {

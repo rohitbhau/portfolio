@@ -1,49 +1,132 @@
-#works{
-    margin: 0 auto;
-    min-height: calc(100vh-4rem);
-    width: 100vw;
-    max-width: 60rem;
+#projects {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 3rem 2rem; /* Increased padding for more space around content */
+    border-radius: 1rem;
+    max-width: 75rem;
+    margin: 2rem auto;
+    text-align: center;
+    min-height: 600px; /* Ensure the section has enough height */
+}
+
+/* Title and Description */
+.projectsTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+}
+
+.projectsDesc {
+    font-size: 1.25rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+/* Projects Grid */
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Project Card */
+.projectCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 1rem; /* Added margin for spacing from top */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 0 1rem;
+    max-width: 100%;
+    height: auto; /* Allow the height to grow depending on content */
+    justify-content: space-between;
 }
-.worksTitle{
-    margin: 1rem 0;
-    font-size: 3rem;
+
+/* Hover Effect */
+.projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
-.worksDesc{
-    font-weight: 300;
-    font-size: 1rem;
-    max-width: 45rem;
+
+/* Project Image */
+.projectImg {
+    width: 60%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
-.worksImgs{
+
+/* Project Details */
+.projectDetails {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 65rem;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-grow: 1; /* Ensures content area grows to take available space */
 }
-.worksImg{
-    object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
+
+.projectDetails h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
 }
-.worksBtn{
-    margin: 3rem 0;
-    padding:0.5rem 2.5rem;
-    border: none;
-    border-radius: 2rem;
-    background: #539165;
+
+.projectDetails p {
     font-size: 1rem;
-    cursor: pointer;
+    color: #ddd;
+    line-height: 1.5;
+    padding: 0 10px;
+    margin-bottom: 1rem;
 }
-@media screen and (max-width:585px) {
-    .worksImg{
-        height: 48vw;
+
+/* Project Button */
+.projectBtn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Ensures the button stays at the bottom */
+}
+
+.projectBtn:hover {
+    background-color: #008c9e;
+}
+
+/* Responsive Design */
+@media (max-width: 720px) {
+    #projects {
+        padding: 2rem;
     }
-    
+
+    .projectsTitle {
+        font-size: 2rem;
+    }
+
+    .projectsDesc {
+        font-size: 1.1rem;
+    }
+
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .projectCard {
+        padding: 1rem;
+        height: auto; /* Allow cards to adjust in height */
+    }
+
+    .projectImg {
+        width: 80%;
+        max-width: 200px;
+    }
 }

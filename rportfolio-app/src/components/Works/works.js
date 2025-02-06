@@ -1,27 +1,46 @@
 import React from 'react';
 import './works.css';
-import { Button } from 'react-scroll';
 import Mywork from '../../assets/calculator-min.png';
 import Myworkone from '../../assets/whatsapplogo.png';
 import Myworktwo from '../../assets/uidesign.jpg';
-import Myworkthree from '../../assets/uidesign.jpg';
-import Myworkfour from '../../assets/uidesign.jpg';
-import Myworkfive from '../../assets/uidesign.jpg';
-const Works=()=>{
-    return(
-        <section id="works">
-            <h2 className='worksTitle'>My Portfolio</h2>
-            <span className='worksDesc'>lorem lumpsum</span>
-            <div className='worksImgs'>
-                <img src={Myworkfive} alt='' className='worksImg'/>
-                <img src={Myworkfour} alt='' className='worksImg'/>
-                <img src={Myworkthree} alt='' className='worksImg'/>
-                <img src={Myworktwo} alt='' className='worksImg'/>
-                <img src={Myworkone} alt="" className='worksImg'/>
-                <img src={Mywork} alt="" className='worksImg'/>
-            </div>
-            <Button className='worksBtn'>See more</Button>
-        </section>
-    );
+
+const Works = () => {
+  return (
+    <section id="projects">
+      <span className='projectsTitle'>My Projects</span> <br/>
+      <span className='projectsDesc'>Here are some of the projects I've worked on</span>
+
+      {/* Projects Grid */}
+      <div className='projectsGrid'>
+        <div className='projectCard'>
+          <img src={Mywork} alt="Calculator App" className='projectImg' />
+          <div className='projectDetails'>
+            <h2>Calculator App</h2>
+            <p>A simple calculator app built with React for performing basic arithmetic operations.</p>
+            <a href="https://github.com/rohitbhau/calculator" target="_blank" rel="noreferrer" className='projectBtn'>View Project</a>
+          </div>
+        </div>
+
+        <div className='projectCard'>
+          <img src={Myworkone} alt="Chat App" className='projectImg' />
+          <div className='projectDetails'>
+            <h2>Chat Application</h2>
+            <p>A real-time chat application using WebSocket, React, and Node.js for seamless communication.</p>
+            <a href="https://github.com/rohitbhau/chat-app" target="_blank" rel="noreferrer" className='projectBtn'>View Project</a>
+          </div>
+        </div>
+
+        <div className='projectCard'>
+          <img src={Myworktwo} alt="UI Design Portfolio" className='projectImg' />
+          <div className='projectDetails'>
+            <h2>UI Design Portfolio</h2>
+            <p>Showcase of modern UI/UX designs created using Figma, focusing on user-friendly experiences.</p>
+            <a href="https://www.figma.com/proto/rohit-designs" target="_blank" rel="noreferrer" className='projectBtn'>View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
+
 export default Works;
