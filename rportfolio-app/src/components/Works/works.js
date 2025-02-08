@@ -24,8 +24,8 @@ const Works = () => {
         <div className='projectCard'>
           <img src={Myworkone} alt="Chat App" className='projectImg' />
           <div className='projectDetails'>
-            <h2>Chat Application</h2>
-            <p>A real-time chat application using WebSocket, React, and Node.js for seamless communication.</p>
+            <h2>TMS</h2>
+            <p>A Task Management System for Organizations with frontend and backend.</p>
             <a href="https://github.com/rohitbhau/chat-app" target="_blank" rel="noreferrer" className='projectBtn'>View Project</a>
           </div>
         </div>
