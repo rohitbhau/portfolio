@@ -1,7 +1,7 @@
 import React from 'react';
 import './works.css';
 import Mywork from '../../assets/calculator-min.png';
-import Myworkone from '../../assets/whatsapplogo.png';
+import Myworkone from '../../assets/TMS.png';
 import Myworktwo from '../../assets/uidesign.jpg';
 
 const Works = () => {
